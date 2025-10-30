@@ -1,0 +1,21 @@
+{
+  "name": "字节跳动招聘",
+  "url": "https://jobs.bytedance.com/experienced/position",
+  "strategy": "bytedance",
+  "description": "字节跳动官方招聘网站",
+  "selectors": {
+    "searchInput": "input[placeholder*='搜索'], input[type='text']",
+    "searchButton": "button[type='submit'], button.search-btn",
+    "jobList": "[class*='job-card'], [class*='position-item'], [class*='job-item']",
+    "jobTitle": "[class*='title'], [class*='name']",
+    "company": "[class*='company']",
+    "location": "[class*='location'], [class*='city']",
+    "salary": "[class*='salary']",
+    "experience": "[class*='experience'], [class*='requirement']",
+    "link": "a"
+  },
+  "waitTime": {
+    "initial": 2000,
+    "afterSearch": 3000
+  }
+}

@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>求职信息爬虫</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>求职信息爬虫</h1>
+            <p class="subtitle">支持多个招聘网站的自动化搜索</p>
+        </header>
+
+        <div class="search-section">
+            <div class="form-group">
+                <label for="website">选择招聘网站：</label>
+                <select id="website">
+                    <option value="">-- 选择网站或输入自定义URL --</option>
+                    <option value="xiaohongshu">小红书招聘 (job.xiaohongshu.com)</option>
+                    <option value="bytedance">字节跳动招聘 (jobs.bytedance.com)</option>
+                    <option value="custom">自定义URL</option>
+                </select>
+            </div>
+
+            <div class="form-group" id="customUrlGroup" style="display: none;">
+                <label for="customUrl">自定义URL：</label>
+                <input type="text" id="customUrl" placeholder="https://example.com/jobs">
+            </div>
+
+            <div class="form-group">
+                <label for="keyword">搜索关键词：</label>
+                <input type="text" id="keyword" placeholder="例如：前端工程师、产品经理">
+            </div>
+
+            <div class="form-group">
+                <label for="location">工作地点（可选）：</label>
+                <input type="text" id="location" placeholder="例如：北京、上海">
+            </div>
+
+            <div class="form-group">
+                <label for="maxResults">最大结果数：</label>
+                <input type="number" id="maxResults" value="20" min="1" max="100">
+            </div>
+
+            <button id="searchBtn" class="btn-primary">开始搜索</button>
+        </div>
+
+        <div id="loading" class="loading" style="display: none;">
+            <div class="spinner"></div>
+            <p>正在抓取岗位信息，请稍候...</p>
+        </div>
+
+        <div id="results" class="results-section"></div>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>

@@ -1,0 +1,20 @@
+{
+  "name": "小红书招聘",
+  "url": "https://job.xiaohongshu.com/social/position",
+  "strategy": "xiaohongshu",
+  "description": "小红书官方招聘网站",
+  "selectors": {
+    "searchInput": "input[placeholder*='搜索'], input[type='text']",
+    "searchButton": "button[type='submit'], button.search-btn",
+    "jobList": "[class*='job-item'], [class*='position-item']",
+    "jobTitle": "[class*='title'], [class*='name'], h3, h4",
+    "company": "[class*='company'], [class*='corp']",
+    "location": "[class*='location'], [class*='city'], [class*='area']",
+    "salary": "[class*='salary'], [class*='pay']",
+    "link": "a"
+  },
+  "waitTime": {
+    "initial": 2000,
+    "afterSearch": 3000
+  }
+}

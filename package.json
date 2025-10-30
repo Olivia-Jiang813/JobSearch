@@ -1,0 +1,21 @@
+{
+  "name": "job-search-scraper",
+  "version": "1.0.0",
+  "description": "Multi-site job scraper with configurable selectors",
+  "main": "backend/server.js",
+  "scripts": {
+    "start": "node backend/server.js",
+    "dev": "nodemon backend/server.js"
+  },
+  "keywords": ["job", "scraper", "automation", "playwright"],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.18.2",
+    "playwright": "^1.40.0",
+    "cors": "^2.8.5"
+  },
+  "devDependencies": {
+    "nodemon": "^3.0.2"
+  }
+}
